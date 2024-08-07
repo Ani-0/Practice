@@ -1,33 +1,20 @@
-//Number guessing Number;
-const min = 1;
-const max = 100;
-const Answer = Math.floor (Math.random()*(max - min + 1)) + min; 
-
-let attempts = 0;
-let guess;
-let runtime = true;
-
-while(runtime){
-    guess = window.prompt(`Guess a number between ${min} -${max}`);
-    guess = Number(guess);
-    
-    if(isNaN(guess)){
-        window.alert("Enter a valid Number: ")
+const textbox = document.getElementById("textbox");
+const fahrenheit = document.getElementById("fahrenheit");
+const Celsius = document.getElementById("Celsius");
+const result =document.getElementById("result");
+function convert(){
+    let temp = 0 ;
+    if(fahrenheit.checked){
+        temp = Number(textbox.value);
+        temp = temp * 9 / 5 + 32;
+        result.innerHTML = temp.toFixed(2) + "°F"
     }
-    else if(guess < min || guess > max){
-        window.alert("guess the valid Number");
+    else if(Celsius.checked){
+       temp = Number(textbox.value);
+       temp = (temp - 32)* 5 / 9;
+       result.innerHTML = temp.toFixed(2) + "°C"
     }
     else{
-        attempts = 0;
-        if(Answer > guess){
-            window.alert("TOO LOW! NUMBER");
-        }
-        else if(Answer < guess){
-            window.alert("TOO HEIGH! NUMBER");
-        }
-        else{
-            window.alert(`congratulation you have select the currect ${Answer} Number`);
-            runtime = false;
-        }
+        result.innerHTML=("select the unit");
     }
 }
