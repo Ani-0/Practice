@@ -1,12 +1,13 @@
-class Total{
-    constructor(firstnumber, secondnumber, thirdnumber){
-        this.firstnumber = firstnumber,
-        this.secondnumber = secondnumber,
-        this.thirdnumber = thirdnumber
+class number{
+    constructor(element1, element2){
+        this.element1 = element1;
+        this.element2 = element2
     }
-    averagenumber(){
-        return ((this.firstnumber+this.secondnumber+this.thirdnumber)/3).toFixed(2);
+    totalnumber(){
+        return this.element1+this.element2;
     }
 }
-const total1 = new Total(23, 22, 10);
-console.log(total1.averagenumber());
+const element1 = 20;
+const element2 = 10;
+const instance = new number(element1, element2);
+console.log(instance.totalnumber());
