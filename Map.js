@@ -1,28 +1,33 @@
-//For Each Loop function
-const aniket = [1, 2, 3, 4, 5];
-function double(element){
-   console.log(element*3);
+//Map fuction;
+const country = ["Australia", "Russia", "India", "Canada"];
+function dispplaycountry(NameofCountry){
+    return(NameofCountry);
 }
-aniket.forEach(double);
+const x = country.map(dispplaycountry);
+console.log(x);
+
+//forEatch function;
 
 const number = [1, 2, 3, 4, 5];
-//.map() function
-function numbers(element){
-    return Math.pow(element, 2);
+function element(numbers){
+    console.log(numbers)
 }
-const total = number.map(numbers);
-console.log(total);
+number.forEach(element);
 
-const Citys = ["Banglore", "Mumbai", "Delhi", "Gurugu"];
-function totalCity(City){
-    return City;
-}
-const NameofCity = Citys.map(totalCity);
-console.log(NameofCity);
+//filter Method
 
-const country = ["India", "Australia", "USA", "UK"];
-function totalCountry(NameofCountry){
-    return NameofCountry;
+const countingNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function displayNumber(evennumber){
+    return evennumber %2 === 0;
 }
-const contrys = country.map(totalCountry);
-console.log(contrys);
+const Evennumber = countingNumber.filter(displayNumber);
+console.log(Evennumber);
+
+//Reduce Method 
+
+const spacialnumber = [1, 2, 3, 4, 5]
+function displaynumber(accumulater, elementer){
+    return accumulater + elementer;
+}
+const y = spacialnumber.reduce(displaynumber);
+console.log(y);
