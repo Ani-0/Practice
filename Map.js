@@ -1,13 +1,19 @@
-class NumberClass{
-    constructor(element1, element2){
-        this.element1 = element1;
-        this.element2 = element2
+class Animal{
+    Alive = true;
+   
+    eat(){
+        console.log(`This  ${this.name} is eating`)
     }
-    substaction(){
-        return this.element1 - this.element2;
+    sleep(){
+        console.log(`This is ${this.name} Sleep`);
     }
 }
-const element1 = 50;
-const element2 = 30;
-const totalnumber = new NumberClass(element1, element2);
-console.log(totalnumber.substaction());
+class Fox extends Animal{
+    name = "fox";
+}
+class elephent extends Animal{
+    name =  "elephent";
+}
+const fox = new Fox();
+fox.eat();
+console.log(fox.Alive);
