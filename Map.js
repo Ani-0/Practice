@@ -1,19 +1,24 @@
-class Animal{
-    Alive = true;
-   
-    eat(){
-        console.log(`This  ${this.name} is eating`)
-    }
-    sleep(){
-        console.log(`This is ${this.name} Sleep`);
+//superkey - keyword is called the constroctor and access the propertyes and method of the perent
+class Animal{ 
+    constructor(name, age){
+        this.name = name;
+        this.age = age
     }
 }
-class Fox extends Animal{
-    name = "fox";
+class Rabbit extends Animal{
+    constructor(name, age, runspeed){
+        super(name, age)
+        this.runspeed = runspeed;
+    }
 }
-class elephent extends Animal{
-    name =  "elephent";
+class Eagle extends Animal{
+    constructor(name, age, flyingSpeed){
+        super(name, age);
+        this.flyingSpeed = flyingSpeed
+    }
 }
-const fox = new Fox();
-fox.eat();
-console.log(fox.Alive);
+const rabbit = new Rabbit("jarry",2, 25);
+const eagle =new Eagle("Jasmin", 4, 150);
+console.log(eagle.name);
+console.log(eagle.age);
+console.log(eagle.flyingSpeed);
