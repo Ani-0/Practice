@@ -1,24 +1,34 @@
-//superkey - keyword is called the constroctor and access the propertyes and method of the perent
-class Animal{ 
-    constructor(name, age){
-        this.name = name;
-        this.age = age
+//getter - Getter method are spacial method that makes a property readable.
+//setter - setter method are spacial method that makes a property wrighting.
+
+class value{
+    constructor(height, width){
+        this.height = height;
+        this.width = width
+    }
+    set width(newwidth){
+        if(newwidth > 0){
+            this._width = newwidth;
+        }
+        else{
+            console.error("Sorry you have not select positive number");
+        }
+    }
+    set height(newheight){
+        if(newheight > 0){
+            this._height = newheight; 
+        }
+        else{
+            console.error("Sorry you have not select positive number");
+        }
+    }
+    get width(){
+        return this._width;
+    }
+    get height(){
+        return this._height
     }
 }
-class Rabbit extends Animal{
-    constructor(name, age, runspeed){
-        super(name, age)
-        this.runspeed = runspeed;
-    }
-}
-class Eagle extends Animal{
-    constructor(name, age, flyingSpeed){
-        super(name, age);
-        this.flyingSpeed = flyingSpeed
-    }
-}
-const rabbit = new Rabbit("jarry",2, 25);
-const eagle =new Eagle("Jasmin", 4, 150);
-console.log(eagle.name);
-console.log(eagle.age);
-console.log(eagle.flyingSpeed);
+const property = new value(100, 50);
+console.log(property.width);
+console.log(property._height);
