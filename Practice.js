@@ -1,12 +1,12 @@
 //1.document.getElementClassName.
 
-/*const fruits = document.getElementsByClassName("Fruits");
-fruits[0].style.backgroundColor = "Yellow";*/
+const fruits = document.getElementsByClassName("Fruits");
+fruits[0].style.backgroundColor = "Yellow";
 
 //2.document.getElementTagName.
 
-/*const lielement = document.getElementsByTagName("li");
-lielement[0].style.backgroundColor = "lightgreen";*/
+const lielement = document.getElementsByTagName("li");
+lielement[0].style.backgroundColor = "lightgreen";
 
 //3.document.querySelector.
 
@@ -15,5 +15,5 @@ fruit.style.backgroundColor = "yellow";
 
 //4.document.querySelectorAll.
 
-// const element = document.querySelectorAll(".Fruits");
-// element[0].style.backgroundColor = "Yellow";
+/const element = document.querySelectorAll(".Fruits");
+element[0].style.backgroundColor = "Yellow";
